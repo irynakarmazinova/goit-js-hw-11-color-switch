@@ -20,9 +20,12 @@ function onStartBtn() {
   //   }
 
   intervalId = setInterval(() => {
-    document.body.style.backgroundColor = colors[1];
-    // document.body.style.backgroundColor = colors[randomIntegerFromInterval];
-    // document.body.style.backgroundColor = randomIntegerFromInterval(colors);
+    // document.body.style.backgroundColor =
+    // colors[Math.floor(Math.random() * colors.length)];
+
+    document.body.style.backgroundColor =
+      colors[randomIntegerFromInterval(0, colors.length - 1)];
+
     console.log("изменяю цвет фона");
   }, 1000);
 }
